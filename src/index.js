@@ -18,13 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     button.innerHTML = "X";
     li.appendChild(button);
     ul.appendChild(li)
-    // form.reset();
+    form.reset(); // still don't know what this does ?????
     button.onclick = function () {
       this.parentElement.remove();
     }
-
     e.preventDefault();
   }
-  //submit button even listerner
-  submit.addEventListener('click', createNewTask)
+
+  // event listener for form element
+  form.addEventListener('submit', createNewTask)
+  
 });
